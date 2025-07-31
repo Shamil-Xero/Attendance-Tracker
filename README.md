@@ -11,10 +11,11 @@ A dynamic, web-based attendance tracking application with calendar-based input a
 - **Today Highlighting**: Current date is automatically highlighted for easy reference
 
 ### 📊 Four Attendance States
-- **Full Present** (7 classes) - Green color
-- **Forenoon Present** (4 classes) - Orange color  
-- **Afternoon Present** (3 classes) - Blue color
-- **Absent** (0 classes) - Red color
+- **Full Present** (7 classes) - <span style="color:green; font-weight:bold;">Green</span>: Attended all classes for the day
+- **Forenoon Present** (4 classes) - <span style="color:orange; font-weight:bold;">Orange</span>: Attended only the forenoon session
+- **Afternoon Present** (3 classes) - <span style="color:blue; font-weight:bold;">Blue</span>: Attended only the afternoon session
+- **Absent** (0 classes) - <span style="color:red; font-weight:bold;">Red</span>: Absent for the entire day
+- **No Attendance** (default) - No color: No attendance recorded for the day
 
 ### 📈 Real-Time Statistics
 - **Total Days**: Number of days with attendance recorded
@@ -41,12 +42,13 @@ A dynamic, web-based attendance tracking application with calendar-based input a
 3. Your data is automatically saved locally in your browser
 
 ### Recording Attendance
-1. **Click on any date** in the calendar to cycle through attendance states:
-   - First click: Full Present (7 classes)
-   - Second click: Forenoon Present (4 classes)  
-   - Third click: Afternoon Present (3 classes)
-   - Fourth click: Absent (0 classes)
-   - Fifth click: Back to no attendance (default)
+1. **Click on any date** in the calendar to cycle through attendance states in the following order:
+   1. No attendance (default, unmarked)
+   2. Full Present (7 classes) - Green
+   3. Forenoon Present (4 classes) - Orange
+   4. Afternoon Present (3 classes) - Blue
+   5. Absent (0 classes) - Red
+   6. Back to No attendance (cycle repeats)
 
 2. **Navigate between months** using:
    - Left/Right arrow buttons
