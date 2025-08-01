@@ -250,8 +250,8 @@ header h1 i {
 }
 
 .control-btn:hover {
-  background: #38a169;
-  transform: translateY(-2px);
+    background: #308a5a;
+    transform: translateY(-2px);
 }
 
 .control-btn.danger {
