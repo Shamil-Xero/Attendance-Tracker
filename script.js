@@ -389,13 +389,18 @@ class AttendanceTracker {
     const timeString = now.toTimeString().split(" ")[0].replace(/:/g, "-");
     const dateString = now.toISOString().split("T")[0];
 
+    // Create a safe filename by replacing spaces and special characters
+    const safeUserName = this.userName
+      .replace(/[^a-zA-Z0-9]/g, "-")
+      .toLowerCase();
+
     const blob = new Blob([JSON.stringify(data, null, 2)], {
       type: "application/json",
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `attendance-data-${dateString}-${timeString}.json`;
+    a.download = `${safeUserName}-attendance-data-${dateString}-${timeString}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
